@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalHope NGO - Making a Difference</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-color: #f8f9fa;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(26, 82, 118, 0.95);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .navbar-brand, .nav-link {
+            color: var(--light-color) !important;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--light-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(26, 82, 118, 0.85), rgba(41, 128, 185, 0.85)), 
+                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 150px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-section h1 {
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+        }
+        
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            font-weight: 500;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2472a4;
+            border-color: #2472a4;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            font-weight: 500;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #d62c1a;
+            border-color: #d62c1a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .volunteer-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--accent-color);
+        }
+        
+        .form-control, .form-select {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.25rem rgba(41, 128, 185, 0.25);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 60px 0 20px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light-color);
+            border-radius: 50%;
+            font-size: 1.2rem;
+            margin: 0 8px;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .stats-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 15px;
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(41, 128, 185, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            background-color: var(--secondary-color);
+        }
+        
+        .cause-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .cause-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cause-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .cause-body {
+            padding: 25px;
+        }
+        
+        .cause-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .cause-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 120px 0 100px;
+                background-attachment: scroll;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 0 80px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .volunteer-form {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section p {
+                font-size: 1rem;
+            }
+            
+            .btn-primary, .btn-secondary {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style> -->
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-hands-helping me-2"></i>GlobalHope
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#causes">Our Causes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#volunteer">Volunteer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="#" class="btn btn-secondary">Donate Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <h1 class="display-4 fw-bold mb-4 animate_animated animate_fadeInDown">Together We Can Change Lives</h1>
+            <p class="lead mb-5 animate_animated animatefadeIn animate_delay-1s">Join our global movement to create sustainable change through education, healthcare, and community development initiatives.</p>
+            <div class="d-flex justify-content-center gap-3 animate_animated animatefadeInUp animate_delay-1s">
+                <a href="#volunteer" class="btn btn-primary btn-lg px-4">Join Our Team</a>
+                <a href="#causes" class="btn btn-outline-light btn-lg px-4">Our Causes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number animate__animated" data-count="12500">0</div>
+                        <div class="stat-label">Volunteers</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number animate__animated" data-count="32">0</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number animate__animated" data-count="1200000">0</div>
+                        <div class="stat-label">Lives Impacted</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number animate__animated" data-count="85">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title animate_animated animate_fadeIn">Why Choose Us</h2>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6 mb-4 animate_animated animate_fadeInUp">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Reach</h3>
+                        <p>We operate in over 30 countries, bringing our expertise and resources to communities that need it most.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 animate_animated animatefadeInUp animate_delay-1s">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Proven Impact</h3>
+                        <p>Our programs have demonstrated measurable improvements in education, health, and economic outcomes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 animate_animated animatefadeInUp animate_delay-2s">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Community Focused</h3>
+                        <p>We work with local leaders to develop solutions that are culturally appropriate and sustainable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 animate_animated animate_fadeInLeft">
+                    <h2 class="section-title text-start">About GlobalHope</h2>
+                    <p class="lead">Founded in 2005, GlobalHope has grown from a small local initiative to an international force for positive change.</p>
+                    <p>Our approach combines immediate relief with long-term development strategies. We believe in empowering communities to become self-sufficient through education, skills training, and infrastructure development.</p>
+                    
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Transparent Operations</h5>
+                                <p class="mb-0">90% of donations go directly to programs</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Award-Winning</h5>
+                                <p class="mb-0">Recognized by UN for excellence in 2022</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Local Partnerships</h5>
+                                <p class="mb-0">Working with 200+ local organizations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate_animated animate_fadeInRight">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Our Team" 
+                             class="img-fluid rounded shadow-lg">
+                        <div class="position-absolute bottom-0 start-0 bg-white p-3 shadow-sm rounded" style="width: 80%; transform: translate(-20%, 20%);">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary text-white rounded-circle p-3 me-3">
+                                    <i class="fas fa-trophy fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Top Rated Charity</h5>
+                                    <p class="mb-0 text-muted">Charity Navigator 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section id="causes" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Our Key Causes</h2>
+            <p class="text-center lead mb-5">We focus on these critical areas to create maximum impact</p>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 animate__animated">
+                    <div class="cause-card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Education" 
+                             class="img-fluid cause-img">
+                        <div class="cause-body">
+                            <h4 class="cause-title">Education for All</h4>
+                            <p>Building schools, training teachers, and providing scholarships to ensure every child has access to quality education.</p>
+                            <div class="cause-meta">
+                                <span><i class="fas fa-map-marker-alt me-1"></i> 18 Countries</span>
+                                <span><i class="fas fa-users me-1"></i> 250,000+ Children</span>
+                            </div>
+                            <div class="progress mt-3">
+                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>$1.2M raised</span>
+                                <span>85% of goal</span>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Support This Cause</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 animate__animated">
+                    <div class="cause-card">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Healthcare" 
+                             class="img-fluid cause-img">
+                        <div class="cause-body">
+                            <h4 class="cause-title">Healthcare Access</h4>
+                            <p>Establishing clinics, training healthcare workers, and providing essential medicines to underserved communities.</p>
+                            <div class="cause-meta">
+                                <span><i class="fas fa-map-marker-alt me-1"></i> 22 Countries</span>
+                                <span><i class="fas fa-users me-1"></i> 500,000+ Patients</span>
+                            </div>
+                            <div class="progress mt-3">
+                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>$950k raised</span>
+                                <span>72% of goal</span>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Support This Cause</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 animate__animated">
+                    <div class="cause-card">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Clean Water" 
+                             class="img-fluid cause-img">
+                        <div class="cause-body">
+                            <h4 class="cause-title">Clean Water Initiative</h4>
+                            <p>Installing wells, water purification systems, and sanitation facilities in communities without access to clean water.</p>
+                            <div class="cause-meta">
+                                <span><i class="fas fa-map-marker-alt me-1"></i> 15 Countries</span>
+                                <span><i class="fas fa-users me-1"></i> 300,000+ Beneficiaries</span>
+                            </div>
+                            <div class="progress mt-3">
+                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>$800k raised</span>
+                                <span>65% of goal</span>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Support This Cause</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary btn-lg">View All Causes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">What People Say</h2>
+            
+            <div class="row mt-5">
+                <div class="col-lg-4 mb-4 animate__animated">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">GlobalHope transformed our village by building a school and training local teachers. Our children now have opportunities we never dreamed possible.</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" 
+                                 alt="Maria Gutierrez" 
+                                 class="rounded-circle me-3" 
+                                 width="60">
+                            <div>
+                                <h5 class="testimonial-author mb-0">Maria Gutierrez</h5>
+                                <p class="testimonial-role mb-0">Community Leader, Guatemala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 animate__animated">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">As a volunteer, I've seen firsthand how GlobalHope's approach creates sustainable change. They truly listen to community needs and work collaboratively.</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                 alt="David Chen" 
+                                 class="rounded-circle me-3" 
+                                 width="60">
+                            <div>
+                                <h5 class="testimonial-author mb-0">David Chen</h5>
+                                <p class="testimonial-role mb-0">Volunteer since 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 animate__animated">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Our foundation has partnered with GlobalHope on three projects, and each time we've been impressed by their transparency, efficiency, and measurable impact.</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" 
+                                 alt="Sarah Johnson" 
+                                 class="rounded-circle me-3" 
+                                 width="60">
+                            <div>
+                                <h5 class="testimonial-author mb-0">Sarah Johnson</h5>
+                                <p class="testimonial-role mb-0">Johnson Family Foundation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Form Section -->
+    <section id="volunteer" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 mb-5 mb-lg-0 animate_animated animate_fadeInLeft">
+                            <h2 class="section-title text-start">Join Our Team</h2>
+                            <p class="lead">Your skills and passion can make a real difference.</p>
+                            <p>We're always looking for dedicated individuals to join our global network of volunteers. Whether you can contribute a few hours a week or want to commit to a long-term project, we have opportunities to match your availability and skills.</p>
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary text-white rounded-circle p-2 me-3">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">Flexible Opportunities</h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary text-white rounded-circle p-2 me-3">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">Training Provided</h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary text-white rounded-circle p-2 me-3">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">Remote Options Available</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 animate_animated animate_fadeInRight">
+                            <div class="volunteer-form">
+                                <h3 class="text-center mb-4">Volunteer Application</h3>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="skills" class="form-label">Skills & Expertise *</label>
+                                        <textarea class="form-control" id="skills" rows="2" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Volunteer Interests *</label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="education">
+                                                    <label class="form-check-label" for="education">Education</label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="healthcare">
+                                                    <label class="form-check-label" for="healthcare">Healthcare</label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="environment">
+                                                    <label class="form-check-label" for="environment">Environment</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="fundraising">
+                                                    <label class="form-check-label" for="fundraising">Fundraising</label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="tech">
+                                                    <label class="form-check-label" for="tech">Technology</label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="other">
+                                                    <label class="form-check-label" for="other">Other</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="availability" class="form-label">Availability *</label>
+                                        <select class="form-select" id="availability" required>
+                                            <option value="" selected disabled>Select your availability</option>
+                                            <option value="weekdays">Weekdays</option>
+                                            <option value="weekends">Weekends</option>
+                                            <option value="flexible">Flexible</option>
+                                            <option value="fulltime">Full-time (3+ months)</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motivation" class="form-label">Why do you want to volunteer with us? *</label>
+                                        <textarea class="form-control" id="motivation" rows="3" required></textarea>
+                                    </div>
+                                    <div class="mb-4 form-check">
+                                        <input type="checkbox" class="form-check-input" id="agree" required>
+                                        <label class="form-check-label" for="agree">I agree to the terms and privacy policy *</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-secondary btn-lg px-5">Submit Application</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4 animate_animated animate_fadeInDown">Ready to Make an Impact?</h2>
+            <p class="lead mb-4 animate_animated animatefadeIn animate_delay-1s">Join thousands of volunteers creating change around the world.</p>
+            <div class="d-flex justify-content-center gap-3 animate_animated animatefadeInUp animate_delay-1s">
+                <a href="#volunteer" class="btn btn-light btn-lg px-4">Volunteer Today</a>
+                <a href="#" class="btn btn-outline-light btn-lg px-4">Make a Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-white mb-4">GlobalHope</h4>
+                    <p>Dedicated to creating sustainable change through education, healthcare, and community development initiatives worldwide.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#causes" class="text-white text-decoration-none">Our Causes</a></li>
+                        <li class="mb-2"><a href="#volunteer" class="text-white text-decoration-none">Volunteer</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Education</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Healthcare</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Clean Water</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Women's Empowerment</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Disaster Relief</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-map-marker-alt me-3 mt-1"></i>
+                            <span>123 Charity Avenue, Hope City, HC 12345</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-phone me-3 mt-1"></i>
+                            <span>+1 (123) 456-7890</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-envelope me-3 mt-1"></i>
+                            <span>info@globalhope.org</span>
+                        </li>
+                    </ul>
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-secondary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 bg-light opacity-10">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 GlobalHope. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
